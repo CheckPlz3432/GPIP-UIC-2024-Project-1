@@ -1,52 +1,62 @@
-
-
-  
-  /* Create two equal columns that floats next to each other */
+  /* Create two equal columns that floats next to each other
   .container {
-    display: flex;  /* Enables flexible arrangement of child elements */
-     /* Allows boxes to wrap to multiple lines if needed */
-    justify-content: center; /* Centers boxes horizontally within the container */
-    margin: 0 auto; /* Centers the container horizontally on the page */
-    
-  }
-  
-  .box, .single-box {
-    width: auto;  /* Adjust width as needed */
-    height: 350px; /* Adjust height as needed */
-    background-color: rgb(110, 179, 249);
-    color: black;
-    border-radius: 50px; /* Creates rounded corners */
-    margin: 25px;  /* Adds spacing between boxes */
-    font-size: 12px;
-    font-family: "Roboto", sans-serif;
-    box-shadow: 10px 10px;
-    text-align: center;
+    display: flex;  Enables flexible arrangement of child elements
+     Allows boxes to wrap to multiple lines if needed 
+    justify-content: center;  Centers boxes horizontally within the container 
+    margin: 0 auto;  Centers the container horizontally on the page */
 
-    padding: 30px;
-  }
-
-  @media screen and (max-width: 900px) {
-    .row {
-      flex-direction: column;
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+      grid-gap: 10px; /* Optional spacing between cards */
     }
-  }
+  
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    li {
+      list-style-type: none;
+    }
+  
+    a {
+      text-decoration: none;
+      color: yellow;
+    }
+  
+    .card {
+      width: auto;
+      /* Adjust width as needed */
+      height: 360px;
+      /* Adjust height as needed */
+      background-color: rgb(110, 179, 249);
+      color: black;
+      border-radius: 50px;
+      /* Creates rounded corners */
+      margin: 25px;
+      /* Adds spacing between boxes */
+      font-size: 12.5px;
+      font-family: "Roboto", sans-serif;
+      box-shadow: 10px 10px;
+      text-align: center;
+      padding: 30px;
+    }
 
-  h2 {
-    font-size: 20px;
-    font-weight: bold;
-  }
+    .short-card {
+      /* background-color: red; */
+      height: 210px;
+    }
+  
+    @media screen and (max-width: 767px) {
+      .card {
+        width: 70%; /* Adjust as needed (percentage for responsiveness) */
+        margin: 30px;
+        height: 420px;
+      }
+      .short-card {
+        font-size: 14px;
+        height: 70%;
+      }
 
-  .shortbox {
-    background-color: rgb(255, 33, 33);
-    color: white;
-    font-size: 1.75em;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: yellow;
-  }
+    }
