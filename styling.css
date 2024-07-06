@@ -52,7 +52,7 @@
       .card {
         width: 70%; /* Adjust as needed (percentage for responsiveness) */
         margin: 30px;
-        height: 420px;
+        height: 80%;
       }
       .short-card {
         font-size: 14px;
